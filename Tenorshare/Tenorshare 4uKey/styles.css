@@ -1,0 +1,39 @@
+/* ChatGPT风格样式优化 */
+:root {
+  --primary-color: #165DFF;
+  --secondary-color: #E8F3FF;
+  --text-color: #333333;
+  --light-gray: #F5F7FA;
+  --border-color: #E5E7EB;
+}
+
+/* 基础样式重置 */
+body { @apply bg-light-gray text-text-color font-sans; }
+
+/* 导航栏样式 */
+.nav-container { @apply bg-white border-b border-border-color shadow-sm; }
+.nav-link { @apply text-gray-700 hover:text-primary-color font-medium transition-all duration-200 px-3 py-2 rounded-md hover:bg-secondary-color; }
+.nav-link.active { @apply text-primary-color bg-secondary-color; }
+
+/* 产品卡片样式 - ChatGPT风格 */
+.product-card { @apply bg-white rounded-xl shadow-md border border-border-color overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1; }
+.product-card:hover { @apply shadow-lg border-primary-color/20; }
+
+/* 按钮样式 - ChatGPT风格 */
+.btn-primary { @apply bg-primary-color text-white px-4 py-2 rounded-lg hover:bg-primary-color/90 transition-all duration-200 shadow-sm hover:shadow; }
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .mobile-hidden { @apply hidden; }
+    .mobile-flex { @apply flex; }
+}
+
+/* 图片容器样式 */
+.img-container { @apply overflow-hidden; }
+.img-container img { @apply transition-transform duration-500 hover:scale-105; }
+
+/* 版本信息条样式 */
+.version-badge { @apply bg-secondary-color border-b border-primary-color/10 py-2 text-sm text-primary-color font-medium; }
+
+/* 语言选择器样式 */
+.language-selector { @apply text-sm border border-border-color rounded-lg px-3 py-1.5 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-color/30 transition-all duration-200; }
